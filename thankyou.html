@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>ขอบคุณที่ให้อภัย ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #e0f7fa;
+      text-align: center;
+      padding: 50px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #00796b;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ทั้งรูปและวิดีโอให้มีขนาดเต็ม container */
+    .media-grid img,
+    .media-grid video {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .media-grid img:hover,
+    .media-grid video:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <h1>เย้~ ขอบคุณที่ให้อภัยเค้าน้าาา! 💕</h1>
+  <p>เค้าจะไม่ทำแบบนั้นอีกแล้ว สัญญาเลย!</p>
+
+  <div class="media-grid">
+    <!-- รูปภาพ -->
+    <img src="9f97756e-c0c0-40ff-ba26-e87eeea0184f.jpg" alt="แมวน่ารัก1" />
+    <img src="c9e0e69d-a1fe-402f-b617-77d2e4885416.jpg" alt="แมวน่ารัก2" />
+    <img src="d6da7560-e290-4fa7-93b5-0145de77b303.jpg" alt="แมวน่ารัก3" />
+
+    <!-- วิดีโอ -->
+    <video autoplay muted loop playsinline>
+      <source src="VID20241011152713.mp4" type="video/webm" />
+      Your browser does not support the video tag.
+    </video>
+
+    <video autoplay muted loop playsinline>
+      <source src="db60243a-f3b4-4041-9823-1f66c90c11cd.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <script>
+    // หา video ทุกตัวใน grid
+    const videos = document.querySelectorAll('.media-grid video');
+
+    videos.forEach(video => {
+      video.addEventListener('click', () => {
+        // ฟังก์ชันเปิด fullscreen ตามแต่ละ browser
+        if (video.requestFullscreen) {
+          video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) { /* Safari */
+          video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) { /* IE11 */
+          video.msRequestFullscreen();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

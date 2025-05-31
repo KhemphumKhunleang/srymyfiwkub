@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>นอย!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(to bottom, #ffe0e0, #e0f7fa);
+      text-align: center;
+      padding: 50px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #d32f2f;
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    img.angry-cat {
+        width: clamp(120px, 30vw, 180px);
+        border-radius: 18px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        margin-bottom: 30px;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 12px;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      background-color: #388e3c;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>เลือก!</h1>
+
+  <img src="x3.jpg" alt="แมวโกรธ" class="angry-cat">
+  <p></p>
+  <button onclick="saySorry()">😤 ให้อภัย (ก็ได้...)</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

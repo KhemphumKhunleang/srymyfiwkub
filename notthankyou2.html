@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แน่ใจหรอ TT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(to bottom, #fce4ec, #e0f7fa);
+      text-align: center;
+      padding: 40px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #d81b60;
+      font-size: 2.3em;
+      margin-bottom: 25px;
+    }
+
+    img.sad-cat {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      font-size: 1.1em;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    button:first-child {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    button:first-child:hover {
+      background-color: #388e3c;
+      transform: scale(1.05);
+    }
+
+    button:last-child {
+      background-color: #f44336;
+      color: white;
+    }
+
+    button:last-child:hover {
+      background-color: #c62828;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>ให้อภัยเถอะน้าาา เว็ปทำยาก ;-;;;;;;;</h1>
+
+  <img src="x2.jpg" alt="แมวเศร้า" class="sad-cat">
+
+  <div class="button-container">
+    <button onclick="saySorry()">🥺 ให้อภัยก็ได้</button>
+    <button onclick="saynotSorry3()">💔 ไม่ให้อภัยอยู่ดี</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
